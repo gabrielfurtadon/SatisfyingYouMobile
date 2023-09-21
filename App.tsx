@@ -1,4 +1,4 @@
-import Login from "./src/screen/Login";
+import Login from "./src/screens/Login";
 
 function App() {
   return (
