@@ -1,7 +1,7 @@
 import React from 'react';
 import { StyleSheet, Text, TextInput, View } from 'react-native';
 
-const DefaultInput = ({ title, placeholder, size, secure }) => {
+const DefaultInput = ({ title, placeholder, size, secure, error }) => {
     const styles = StyleSheet.create({
         title: {
             color: 'white',
@@ -20,6 +20,10 @@ const DefaultInput = ({ title, placeholder, size, secure }) => {
             backgroundColor: 'white',
             fontFamily: 'AveriaLibre-Regular'
         },
+        error:{
+            color: '#fd7979',
+            fontFamily: 'AveriaLibre-Regular',
+        }
     });
 
 
@@ -27,6 +31,7 @@ const DefaultInput = ({ title, placeholder, size, secure }) => {
         <View>
             <Text style={styles.title}>{title}</Text>
             <TextInput secureTextEntry={secure} style={styles.input} placeholder={placeholder} />
+            <Text style={styles.error}>{error}</Text>
         </View>
     );
 };
