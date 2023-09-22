@@ -1,7 +1,7 @@
 import { StyleSheet, Text, TouchableOpacity } from 'react-native';
 
 
-export const DefaultButton = ({ title, color, onPress, width, style }) => {
+export const DefaultButton = ({ title, color, onPress, width, style, disabled }) => {
     const buttonStyle = {
         backgroundColor: color || 'green'
     };
@@ -24,6 +24,7 @@ export const DefaultButton = ({ title, color, onPress, width, style }) => {
         <TouchableOpacity
             style={[styles.button, buttonStyle, style]}
             onPress={onPress}
+            disabled={disabled}
         >
             <Text style={styles.buttonText}>{title}</Text>
         </TouchableOpacity>
