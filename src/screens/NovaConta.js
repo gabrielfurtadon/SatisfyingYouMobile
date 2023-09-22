@@ -9,7 +9,7 @@ export default function NovaConta() {
       <DefaultInput secure={true} placeholder={'Digite sua senha'} title={'Senha'} size={300}/>
       <DefaultInput secure={true} placeholder={'Repita sua senha'} title={'Repetir senha'} size={300}/>
     
-      <DefaultButton title={'Cadastrar'} color={'#37BD6D'} style={{width: 300}}/>
+      <DefaultButton title={'Cadastrar'} color={'#37BD6D'} width={300}/>
       
     </View>
   );

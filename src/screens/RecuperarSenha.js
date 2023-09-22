@@ -7,7 +7,7 @@ export default function RecuperarSenha() {
     <View style={styles.container}>
       <DefaultInput placeholder={'Digite seu email'} title={'E-mail'} size={300} error={"E-mail parece ser inválido"}/>
   
-      <DefaultButton title={'Recuperar'} color={'#37BD6D'} style={{width: 300}}/>
+      <DefaultButton title={'Recuperar'} color={'#37BD6D'} width={300}/>
       
     </View>
   );

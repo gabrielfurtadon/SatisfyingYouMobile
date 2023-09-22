@@ -10,11 +10,11 @@ export default function Login() {
       <DefaultInput placeholder={'Digite seu email'} title={'E-mail'} size={300}/>
       <DefaultInput secure={true} placeholder={'Digite sua senha'} title={'Senha'} size={300}/>
 
-      <DefaultButton title={'Entrar'} color={'#37BD6D'} style={{width: 300}}/>
+      <DefaultButton title={'Entrar'} color={'#37BD6D'} width={300}/>
 
       <View style={styles.bottomContainer}>
-        <DefaultButton title={'Criar minha conta'} color={'#419ED7'} style={{width: 300}}/>
-        <DefaultButton title={'Esqueci minha senha'} color={'#B0CCDE'} style={{width: 300}}/>
+        <DefaultButton title={'Criar minha conta'} color={'#419ED7'} width={300}/>
+        <DefaultButton title={'Esqueci minha senha'} color={'#B0CCDE'} width={300}/>
       </View>
       
     </View>
