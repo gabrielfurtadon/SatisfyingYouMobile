@@ -1,13 +1,24 @@
+import { useState } from 'react';
 import { StyleSheet, View } from 'react-native';
 import { DefaultButton } from '../components/DefaultButton';
 import DefaultInput from '../components/DefaultInput';
 
 export default function RecuperarSenha() {
+  const [email, setEmail] = useState('')
+
+  const [emailError, setEmailError] = useState('')
+
+  const handleEmailChange = (text) => {
+    setEmail(text);
+    const regex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/
+    setEmailError(regex.test(text) ? "" : "E-mail parece ser inválido")
+  }
+
   return (
     <View style={styles.container}>
-      <DefaultInput placeholder={'Digite seu email'} title={'E-mail'} size={300} error={"E-mail parece ser inválido"}/>
+      <DefaultInput onChangeText={handleEmailChange} placeholder={'Digite seu email'} title={'E-mail'} size={300} error={emailError}/>
   
-      <DefaultButton title={'Recuperar'} color={'#37BD6D'} width={300}/>
+      <DefaultButton title={'Recuperar'} color={'#37BD6D'} width={300} disabled={Boolean(emailError)}/>
       
     </View>
   );

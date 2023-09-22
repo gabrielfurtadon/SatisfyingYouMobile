@@ -1,16 +1,31 @@
+import { useState } from 'react';
 import { StyleSheet, View } from 'react-native';
 import { DefaultButton } from '../components/DefaultButton';
 import DefaultInput from '../components/DefaultInput';
 import { Logo } from '../components/Logo';
 
 export default function Login() {
+  const [email, setEmail] = useState('')
+  const [password, setPassword] = useState('')
+  const [emailError, setEmailError] = useState('')
+
+  const handleEmailChange = (text) => {
+    setEmail(text);
+    const regex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/
+    setEmailError(regex.test(text) ? "" : "Email inválido")
+  };
+
+  const handlePasswordChange = (text) => {
+    setPassword(text);
+  };
+
   return (
     <View style={styles.container}>
       <Logo/>
-      <DefaultInput placeholder={'Digite seu email'} title={'E-mail'} size={300}/>
-      <DefaultInput secure={true} placeholder={'Digite sua senha'} title={'Senha'} size={300}/>
+      <DefaultInput placeholder={'Digite seu email'} title={'E-mail'} size={300} onChangeText={handleEmailChange} error={emailError}/>
+      <DefaultInput secure={true} placeholder={'Digite sua senha'} title={'Senha'} onChangeText={handlePasswordChange} size={300}/>
 
-      <DefaultButton title={'Entrar'} color={'#37BD6D'} width={300}/>
+      <DefaultButton title={'Entrar'} color={'#37BD6D'} width={300} disabled={Boolean(emailError)}/>
 
       <View style={styles.bottomContainer}>
         <DefaultButton title={'Criar minha conta'} color={'#419ED7'} width={300}/>
