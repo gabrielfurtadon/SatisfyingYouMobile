@@ -4,10 +4,22 @@ import { DefaultButton } from '../components/DefaultButton';
 import DefaultInput from '../components/DefaultInput';
 import { Logo } from '../components/Logo';
 
-export default function Login() {
+export default function Login(props) {
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
   const [emailError, setEmailError] = useState('')
+
+  const goToCriarConta = () => {
+    props.navigation.navigate('NovaConta')
+  }
+
+  const goToRecuperarSenha = () => {
+    props.navigation.navigate('RecuperarSenha')
+  }
+
+  const goToPaginaPrincipal = () => {
+    props.navigation.navigate('PaginaPrincipal')
+  }
 
   const handleEmailChange = (text) => {
     setEmail(text);
@@ -16,20 +28,20 @@ export default function Login() {
   };
 
   const handlePasswordChange = (text) => {
-    setPassword(text);
+    setPassword(text); 
   };
 
   return (
     <View style={styles.container}>
       <Logo/>
-      <DefaultInput placeholder={'Digite seu email'} title={'E-mail'} size={300} onChangeText={handleEmailChange} error={emailError}/>
-      <DefaultInput secure={true} placeholder={'Digite sua senha'} title={'Senha'} onChangeText={handlePasswordChange} size={300}/>
+      <DefaultInput placeholder={'Digite seu email'} title={'E-mail'} size={300} onChangeText={handleEmailChange} error={emailError} borderRadius={8}/>
+      <DefaultInput secure={true} placeholder={'Digite sua senha'} title={'Senha'} onChangeText={handlePasswordChange} size={300} borderRadius={8}/>
 
-      <DefaultButton title={'Entrar'} color={'#37BD6D'} width={300} disabled={Boolean(emailError)}/>
-
+      <DefaultButton title={'Entrar'} color={'#37BD6D'} width={300} disabled={Boolean(emailError)} onPress={goToPaginaPrincipal}/>
+  
       <View style={styles.bottomContainer}>
-        <DefaultButton title={'Criar minha conta'} color={'#419ED7'} width={300}/>
-        <DefaultButton title={'Esqueci minha senha'} color={'#B0CCDE'} width={300}/>
+        <DefaultButton title={'Criar minha conta'} color={'#419ED7'} width={300} onPress={goToCriarConta}/>
+        <DefaultButton title={'Esqueci minha senha'} color={'#B0CCDE'} width={300} onPress={goToRecuperarSenha}/>
       </View>
       
     </View>
