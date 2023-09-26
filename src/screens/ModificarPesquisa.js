@@ -1,15 +1,14 @@
-import React, { useState } from 'react';
-import { StyleSheet, View, Image , Text, TouchableOpacity} from 'react-native';
+import React from 'react';
+import { Image, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import { DefaultButton } from '../components/DefaultButton';
 import DefaultInput from '../components/DefaultInput';
-import { DefaultSectionT } from 'react-native';
 
 
 
 export default function NovaPesquisa(props) {
 
   const goToPaginaPrincipal = () => {
-    props.navigation.navigate('PaginaPrincipal')
+    props.navigation.navigate('Pagina Principal')
   }
 
   return (

@@ -1,9 +1,7 @@
-import React, { useState } from 'react';
-import { StyleSheet, View, ScrollView } from 'react-native';
+import React from 'react';
+import { ScrollView, StyleSheet, View } from 'react-native';
 import { DefaultButton } from '../components/DefaultButton';
 import DefaultInput from '../components/DefaultInput';
-import { Logo } from '../components/Logo';
-import { DefaultSectionT } from 'react-native';
 import { DefaultSquareDiv } from '../components/DefaultSquareDiv';
 
 

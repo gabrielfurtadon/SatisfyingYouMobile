@@ -25,11 +25,11 @@ export default function Login(props) {
     setEmail(text);
     const regex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/
     setEmailError(regex.test(text) ? "" : "Email inválido")
-  };
+  }
 
   const handlePasswordChange = (text) => {
     setPassword(text); 
-  };
+  }
 
   return (
     <View style={styles.container}>
@@ -37,7 +37,7 @@ export default function Login(props) {
       <DefaultInput placeholder={'Digite seu email'} title={'E-mail'} size={300} onChangeText={handleEmailChange} error={emailError} borderRadius={8}/>
       <DefaultInput secure={true} placeholder={'Digite sua senha'} title={'Senha'} onChangeText={handlePasswordChange} size={300} borderRadius={8}/>
 
-      <DefaultButton title={'Entrar'} color={'#37BD6D'} width={300} disabled={Boolean(emailError)} onPress={goToPaginaPrincipal}/>
+      <DefaultButton title={'Entrar'} color={'#37BD6D'} width={300} disabled={Boolean(emailError) || email == '' || password == ''} onPress={goToPaginaPrincipal}/>
   
       <View style={styles.bottomContainer}>
         <DefaultButton title={'Criar minha conta'} color={'#419ED7'} width={300} onPress={goToCriarConta}/>
