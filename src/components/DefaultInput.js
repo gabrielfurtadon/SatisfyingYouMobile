@@ -11,11 +11,10 @@ const DefaultInput = ({ title, placeholder, size, secure, error, onChangeText, b
             height: height | 40,
             borderColor: 'white',
             borderWidth: 1,
-            borderRadius: 5,
             paddingHorizontal: 10,
             marginTop: 5,
             color: 'black',
-            borderRadius: borderRadius,
+            borderRadius: borderRadius || 1,
             width: size,
             backgroundColor: 'white',
             fontFamily: 'AveriaLibre-Regular'

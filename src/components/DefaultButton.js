@@ -9,7 +9,7 @@ export const DefaultButton = ({ title, color, onPress, width, style, disabled}) 
     const styles = StyleSheet.create({
         button: {
             padding: 10,
-            borderRadius: 5,
+            borderRadius: 1,
             alignItems: 'center',
             width: width
         },

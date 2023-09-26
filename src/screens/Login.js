@@ -34,8 +34,8 @@ export default function Login(props) {
   return (
     <View style={styles.container}>
       <Logo/>
-      <DefaultInput placeholder={'Digite seu email'} title={'E-mail'} size={300} onChangeText={handleEmailChange} error={emailError} borderRadius={8}/>
-      <DefaultInput secure={true} placeholder={'Digite sua senha'} title={'Senha'} onChangeText={handlePasswordChange} size={300} borderRadius={8}/>
+      <DefaultInput placeholder={'Digite seu email'} title={'E-mail'} size={300} onChangeText={handleEmailChange} error={emailError}/>
+      <DefaultInput secure={true} placeholder={'Digite sua senha'} title={'Senha'} onChangeText={handlePasswordChange} size={300}/>
 
       <DefaultButton title={'Entrar'} color={'#37BD6D'} width={300} disabled={Boolean(emailError) || email == '' || password == ''} onPress={goToPaginaPrincipal}/>
   
