@@ -1,7 +1,8 @@
-import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import React, { useState } from 'react';
+import { StyleSheet, View, Text } from 'react-native';
 import { DefaultButton } from '../components/DefaultButton';
 import DefaultInput from '../components/DefaultInput';
+import { DefaultSectionT } from 'react-native';
 
 
 
@@ -14,10 +15,8 @@ export default function NovaPesquisa(props) {
   return (
     <View style={styles.container}>
       <View style={styles.forms}>
-      <DefaultInput secure={true} title={'Nome'} size={350} borderRadius={8}/>
-      <Text style={styles.errorText}>Preencha no nome da pesquisa</Text>
-      <DefaultInput secure={true} title={'Data'} size={350} borderRadius={8}></DefaultInput>
-      <Text style={styles.errorText}>Preencha a data</Text>
+      <DefaultInput secure={true} title={'Nome'} size={350} borderRadius={8} error={'Preencha no nome da pesquisa'}/>
+      <DefaultInput secure={true} title={'Data'} size={350} borderRadius={8} error={'Preencha a data'}/>
       <DefaultInput secure={true} placeholder={'Câmera/Galeria de imagens'} title={'Imagem'} size={350} height={70}borderRadius={8}/>
       </View>
       <View style={styles.botao}>
@@ -29,7 +28,7 @@ export default function NovaPesquisa(props) {
 
 const styles = StyleSheet.create({
   forms: {
-    paddingTop: 30
+    paddingTop: 30,
   },
   busca: {
     paddingLeft: 100,
