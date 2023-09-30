@@ -3,8 +3,6 @@ import { StyleSheet, View } from 'react-native';
 import { DefaultButton } from '../components/DefaultButton';
 import DefaultInput from '../components/DefaultInput';
 
-
-
 export default function NovaPesquisa(props) {
 
   const goToHome = () => {

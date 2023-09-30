@@ -1,9 +1,6 @@
 import React from 'react';
-import { ScrollView, StyleSheet, View, Text } from 'react-native';
-import { DefaultButton } from '../components/DefaultButton';
-import DefaultInput from '../components/DefaultInput';
+import { StyleSheet, View, Text } from 'react-native';
 import { DefaultSquareDiv } from '../components/DefaultSquareDiv';
-import Icon from 'react-native-vector-icons/MaterialIcons'
 
 export default function Coleta(props) {
 

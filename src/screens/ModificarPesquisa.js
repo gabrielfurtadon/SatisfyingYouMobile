@@ -4,8 +4,6 @@ import { DefaultButton } from '../components/DefaultButton';
 import DefaultInput from '../components/DefaultInput';
 import DeleteModal from '../components/DeleteModal';
 
-
-
 export default function NovaPesquisa(props) {
   const [modalVisible, setModalVisible] = useState(false);
 

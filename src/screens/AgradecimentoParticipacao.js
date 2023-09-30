@@ -1,15 +1,24 @@
-import React from 'react';
-import { ScrollView, StyleSheet, View, Text } from 'react-native';
-import { DefaultButton } from '../components/DefaultButton';
-import DefaultInput from '../components/DefaultInput';
-import { DefaultSquareDiv } from '../components/DefaultSquareDiv';
-import Icon from 'react-native-vector-icons/MaterialIcons'
+import React, { useEffect } from 'react';
+import { StyleSheet, View, Text } from 'react-native';
 
 export default function AgradecimentoParticipacao(props) {
 
+  const goToColeta = () => {
+    props.navigation.goBack();
+  }
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      goToColeta();
+    }, 3000); 
+
+    return () => clearTimeout(timer);
+  }, []);
+
   return (
     <View style={styles.container}>
-        
+      <Text style={styles.title}>Obrigado por partipar da pesquisa!</Text>
+      <Text style={styles.title}>Aguardamos você no próximo ano!</Text>
     </View>
   );
 }
@@ -18,26 +27,15 @@ const styles = StyleSheet.create({
   container: {
     backgroundColor: '#372775',
     flex: 1,
-    gap: 20, 
+    gap: 100, 
     padding: 10,
-    paddingTop: 30,
-  },
-  squaresContainerIcon: {
-    flexDirection: 'column',
-    gap: 20,
+    alignItems: 'center', 
+    justifyContent: 'center',
   },
   title: {
     color: '#FFFFFF',
     fontSize: 30,
     fontFamily: 'AveriaLibre-Regular',
     textAlign: 'center',
-  },
-  div: {
-    backgroundColor: '#372775',
-    width: 200,
-    height: 200,
-    marginLeft: 10,
-    alignItems: 'center', 
-    justifyContent: 'center',
   }
 });

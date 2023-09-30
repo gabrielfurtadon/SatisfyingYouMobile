@@ -1,9 +1,5 @@
 import React from 'react';
-import { ScrollView, StyleSheet, View } from 'react-native';
-import { DefaultButton } from '../components/DefaultButton';
-import DefaultInput from '../components/DefaultInput';
 import { DefaultSquareDiv } from '../components/DefaultSquareDiv';
-
 
 export default function AcoesPesquisa(props) {
 
