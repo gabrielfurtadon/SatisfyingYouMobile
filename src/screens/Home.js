@@ -5,7 +5,7 @@ import DefaultInput from '../components/DefaultInput';
 import { DefaultSquareDiv } from '../components/DefaultSquareDiv';
 
 
-export default function Main(props) {
+export default function Home(props) {
 
   const goToNovaPesquisa = () => {
     props.navigation.navigate('NovaPesquisa')

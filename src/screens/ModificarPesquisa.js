@@ -7,7 +7,7 @@ import DefaultInput from '../components/DefaultInput';
 
 export default function NovaPesquisa(props) {
 
-  const goToPaginaPrincipal = () => {
+  const goToHome = () => {
     props.navigation.navigate('Pagina Principal')
   }
 
@@ -26,7 +26,7 @@ export default function NovaPesquisa(props) {
       </TouchableOpacity>
 
       <View style={styles.botao}>
-      <DefaultButton   title={'SALVAR'} color={'#37BD6D'} width={350} onPress={goToPaginaPrincipal}/>
+      <DefaultButton   title={'SALVAR'} color={'#37BD6D'} width={350} onPress={goToHome}/>
       </View>
     </View>
   );

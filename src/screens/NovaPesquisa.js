@@ -8,8 +8,8 @@ import { DefaultSectionT } from 'react-native';
 
 export default function NovaPesquisa(props) {
 
-  const goToPaginaPrincipal = () => {
-    props.navigation.navigate('PaginaPrincipal')
+  const goToHome = () => {
+    props.navigation.navigate('Home')
   }
 
   return (
@@ -20,7 +20,7 @@ export default function NovaPesquisa(props) {
       <DefaultInput secure={true} placeholder={'Câmera/Galeria de imagens'} title={'Imagem'} size={350} height={70}borderRadius={8}/>
       </View>
       <View style={styles.botao}>
-      <DefaultButton   title={'CADASTRAR'} color={'#37BD6D'} width={350} onPress={goToPaginaPrincipal}/>
+      <DefaultButton   title={'CADASTRAR'} color={'#37BD6D'} width={350} onPress={goToHome}/>
       </View>
     </View>
   );

@@ -17,8 +17,8 @@ export default function Login(props) {
     props.navigation.navigate('RecuperarSenha')
   }
 
-  const goToPaginaPrincipal = () => {
-    props.navigation.navigate('PaginaPrincipal')
+  const goToHome = () => {
+    props.navigation.navigate('Home')
   }
 
   const handleEmailChange = (text) => {
@@ -37,7 +37,7 @@ export default function Login(props) {
       <DefaultInput placeholder={'Digite seu email'} title={'E-mail'} size={300} onChangeText={handleEmailChange} error={emailError}/>
       <DefaultInput secure={true} placeholder={'Digite sua senha'} title={'Senha'} onChangeText={handlePasswordChange} size={300}/>
 
-      <DefaultButton title={'Entrar'} color={'#37BD6D'} width={300} disabled={Boolean(emailError) || email == '' || password == ''} onPress={goToPaginaPrincipal}/>
+      <DefaultButton title={'Entrar'} color={'#37BD6D'} width={300} disabled={Boolean(emailError) || email == '' || password == ''} onPress={goToHome}/>
   
       <View style={styles.bottomContainer}>
         <DefaultButton title={'Criar minha conta'} color={'#419ED7'} width={300} onPress={goToCriarConta}/>
