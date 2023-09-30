@@ -41,8 +41,7 @@ const App =  () => {
                 <Stack.Screen name="Home" component={Home} />
                 <Stack.Screen name="NovaPesquisa" component={NovaPesquisa} />
                 <Stack.Screen name="ModificarPesquisa" component={ModificarPesquisa} />
-                <Stack.Screen name="Relatorio" component={Relatorio} />
-                <Stack.Screen name="ModificarPesquisa" component={ModificarPesquisa} />                
+                <Stack.Screen name="Relatorio" component={Relatorio} />               
                 <Stack.Screen
                     name="AcoesPesquisa"
                     component={AcoesPesquisa}
