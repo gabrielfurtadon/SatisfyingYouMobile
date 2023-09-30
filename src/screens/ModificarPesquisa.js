@@ -14,15 +14,15 @@ export default function NovaPesquisa(props) {
   return (
     <View style={styles.container}>
       <View style={styles.forms}>
-      <DefaultInput secure={true} title={'Nome'} size={350} borderRadius={8}/>
-      <DefaultInput secure={true} title={'Data'} size={350} borderRadius={8}></DefaultInput>
-      <DefaultInput secure={true} placeholder={'Câmera/Galeria de imagens'} title={'Imagem'} size={350} height={70}borderRadius={8}/>
+        <DefaultInput secure={true} title={'Nome'} size={350}/>
+        <DefaultInput secure={true} title={'Data'} size={350}></DefaultInput>
+        <DefaultInput secure={true} placeholder={'Câmera/Galeria de imagens'} title={'Imagem'} size={350} height={70} />
       </View>
       <TouchableOpacity  >
         <View >
-            <Image source={require('../assets/img/lixeria.png')} style={styles.trashIcon} />
-            <Text style={styles.apagarText}>Apagar</Text>
-          </View>
+          <Image source={require('../assets/img/lixeria.png')} style={styles.trashIcon} />
+          <Text style={styles.apagarText}>Apagar</Text>
+        </View>
       </TouchableOpacity>
 
       <View style={styles.botao}>
@@ -42,21 +42,21 @@ const styles = StyleSheet.create({
   container: {
     backgroundColor: '#372775',
     flex: 1,
-    alignItems: 'center', 
+    alignItems: 'center',
     justifyContent: 'flex-start',
-    gap: 20, 
+    gap: 20,
   },
   botao: {
-    flex: 1, 
-    justifyContent: 'flex-end', 
-    marginBottom: 20, 
+    flex: 1,
+    justifyContent: 'flex-end',
+    marginBottom: 20,
   },
   content1: {
-    color:'black'
+    color: 'black'
   },
   apagarText: {
-    fontSize: 16, 
-    color: 'white', 
+    fontSize: 16,
+    color: 'white',
   },
 
 

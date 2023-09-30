@@ -28,22 +28,21 @@ export default function Login(props) {
   }
 
   const handlePasswordChange = (text) => {
-    setPassword(text); 
+    setPassword(text);
   }
 
   return (
     <View style={styles.container}>
-      <Logo/>
-      <DefaultInput placeholder={'Digite seu email'} title={'E-mail'} size={300} onChangeText={handleEmailChange} error={emailError}/>
-      <DefaultInput secure={true} placeholder={'Digite sua senha'} title={'Senha'} onChangeText={handlePasswordChange} size={300}/>
+      <Logo />
+      <DefaultInput placeholder={'Digite seu email'} title={'E-mail'} size={300} onChangeText={handleEmailChange} error={emailError} />
+      <DefaultInput secure={true} placeholder={'Digite sua senha'} title={'Senha'} onChangeText={handlePasswordChange} size={300} />
 
       <DefaultButton title={'Entrar'} color={'#37BD6D'} width={300} disabled={Boolean(emailError) || email == '' || password == ''} onPress={goToHome}/>
-  
       <View style={styles.bottomContainer}>
-        <DefaultButton title={'Criar minha conta'} color={'#419ED7'} width={300} onPress={goToCriarConta}/>
-        <DefaultButton title={'Esqueci minha senha'} color={'#B0CCDE'} width={300} onPress={goToRecuperarSenha}/>
+        <DefaultButton title={'Criar minha conta'} color={'#419ED7'} width={300} onPress={goToCriarConta} />
+        <DefaultButton title={'Esqueci minha senha'} color={'#B0CCDE'} width={300} onPress={goToRecuperarSenha} />
       </View>
-      
+
     </View>
   );
 }
@@ -67,7 +66,7 @@ const styles = StyleSheet.create({
     borderColor: 'white'
   },
 
-  bottomContainer:{
+  bottomContainer: {
     gap: 10,
     marginTop: 50
   }

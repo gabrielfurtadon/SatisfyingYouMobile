@@ -1,8 +1,7 @@
-import React, { useState } from 'react';
-import { StyleSheet, View, Text } from 'react-native';
+import React from 'react';
+import { StyleSheet, View } from 'react-native';
 import { DefaultButton } from '../components/DefaultButton';
 import DefaultInput from '../components/DefaultInput';
-import { DefaultSectionT } from 'react-native';
 
 
 
@@ -15,12 +14,12 @@ export default function NovaPesquisa(props) {
   return (
     <View style={styles.container}>
       <View style={styles.forms}>
-      <DefaultInput secure={true} title={'Nome'} size={350} borderRadius={8} error={'Preencha no nome da pesquisa'}/>
-      <DefaultInput secure={true} title={'Data'} size={350} borderRadius={8} error={'Preencha a data'}/>
-      <DefaultInput secure={true} placeholder={'Câmera/Galeria de imagens'} title={'Imagem'} size={350} height={70}borderRadius={8}/>
+        <DefaultInput secure={true} title={'Nome'} size={350} error={'Preencha no nome da pesquisa'} />
+        <DefaultInput secure={true} title={'Data'} size={350} error={'Preencha a data'} />
+        <DefaultInput secure={true} placeholder={'Câmera/Galeria de imagens'} title={'Imagem'} size={350} height={70} />
       </View>
       <View style={styles.botao}>
-      <DefaultButton   title={'CADASTRAR'} color={'#37BD6D'} width={350} onPress={goToHome}/>
+        <DefaultButton   title={'CADASTRAR'} color={'#37BD6D'} width={350} onPress={goToHome}/>
       </View>
     </View>
   );
@@ -29,6 +28,7 @@ export default function NovaPesquisa(props) {
 const styles = StyleSheet.create({
   forms: {
     paddingTop: 30,
+    gap: 20
   },
   busca: {
     paddingLeft: 100,
@@ -36,17 +36,17 @@ const styles = StyleSheet.create({
   container: {
     backgroundColor: '#372775',
     flex: 1,
-    alignItems: 'center', 
+    alignItems: 'center',
     justifyContent: 'flex-start',
-    gap: 20, 
+    gap: 20,
   },
   botao: {
-    flex: 1, 
-    justifyContent: 'flex-end', 
-    marginBottom: 20, 
+    flex: 1,
+    justifyContent: 'flex-end',
+    marginBottom: 20,
   },
   content1: {
-    color:'black'
+    color: 'black'
   },
   errorText: {
     color: 'red',
