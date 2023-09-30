@@ -29,9 +29,9 @@ export default function NovaConta() {
 
   return (
     <View style={styles.container}>
-      <DefaultInput onChangeText={handleEmailChange} placeholder={'Digite seu email'} title={'E-mail'} size={300} error={emailError} borderRadius={8}/>
-      <DefaultInput onChangeText={handlePasswordChange} secure={true} placeholder={'Digite sua senha'} title={'Senha'} size={300} borderRadius={8}/>
-      <DefaultInput onChangeText={handleRepeatPasswordChange} secure={true} placeholder={'Repita sua senha'} title={'Repetir senha'} size={300} error={passwordError} borderRadius={8}/>
+      <DefaultInput onChangeText={handleEmailChange} placeholder={'Digite seu email'} title={'E-mail'} size={300} error={emailError} />
+      <DefaultInput onChangeText={handlePasswordChange} secure={true} placeholder={'Digite sua senha'} title={'Senha'} size={300}/>
+      <DefaultInput onChangeText={handleRepeatPasswordChange} secure={true} placeholder={'Repita sua senha'} title={'Repetir senha'} size={300} error={passwordError} />
     
       <DefaultButton title={'Cadastrar'} color={'#37BD6D'} width={300} disabled={Boolean(emailError) || Boolean(passwordError)}/>
       
@@ -51,7 +51,7 @@ const styles = StyleSheet.create({
 
   input: {
     borderWidth: 1,
-    borderRadius: 20,
+    borderRadius: 1,
     padding: '2%',
     width: 300,
     color: 'white',
