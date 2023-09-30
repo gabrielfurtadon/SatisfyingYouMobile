@@ -42,23 +42,41 @@ const App =  () => {
                     component={Login} 
                     options={{ headerShown: false}} 
                 />
-                <Stack.Screen name="NovaConta" component={NovaConta} />
-                <Stack.Screen name="RecuperarSenha" component={RecuperarSenha} />
-
-                <Stack.Screen name="Drawer" component={Drawer} />
-                {/* <Stack.Screen name="Home" component={Home} /> */}
-
-
-                <Stack.Screen name="NovaPesquisa" component={NovaPesquisa} />
-                <Stack.Screen name="ModificarPesquisa" component={ModificarPesquisa} />
-                <Stack.Screen name="Relatorio" component={Relatorio} />               
+                <Stack.Screen 
+                    name="NovaConta" 
+                    component={NovaConta} 
+                    options={{ title: 'Nova Conta' }}
+                />
+                <Stack.Screen 
+                    name="RecuperarSenha" 
+                    component={RecuperarSenha} 
+                    options={{ title: 'Recuperação de senha' }}
+                />
+                <Stack.Screen 
+                    name="Drawer" 
+                    component={Drawer} 
+                    options={{ headerShown: false}} 
+                />
+                <Stack.Screen 
+                    name="NovaPesquisa" 
+                    component={NovaPesquisa} 
+                    options={{ title: 'Nova pesquisa' }}
+                />
+                <Stack.Screen 
+                    name="ModificarPesquisa" 
+                    component={ModificarPesquisa} 
+                    options={{ title: 'Modificar pesquisa' }}
+                />
+                <Stack.Screen 
+                    name="Relatorio" 
+                    component={Relatorio} 
+                    options={{ title: 'Relatório' }}
+                />               
                 <Stack.Screen
                     name="AcoesPesquisa"
                     component={AcoesPesquisa}
                     options={({ route }) => ({
                         title: formatText(route.params?.title) || 'Ações de Pesquisa',
-                        // route.params?.title.split(' ').map((word, index) => index === 0 ? word.charAt(0).toUpperCase() + word.slice(1).toLowerCase() : word).join(' ')
-                        
                     })}
                 />
                 <Stack.Screen 
