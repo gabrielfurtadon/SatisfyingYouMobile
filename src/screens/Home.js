@@ -11,8 +11,8 @@ export default function Home(props) {
     props.navigation.navigate('NovaPesquisa')
   }
 
-  const goToAcoesPesquisa = (titulo) => {
-    props.navigation.navigate('AcoesPesquisa', { titulo });
+  const goToAcoesPesquisa = (title) => {
+    props.navigation.navigate('AcoesPesquisa', { title });
   }
 
   return (
@@ -20,9 +20,10 @@ export default function Home(props) {
       <DefaultInput style={styles.busca} placeholder={'🔍  Insira o termo de busca'} size={350} />
       <ScrollView horizontal={true} style={styles.scrollView}>
         <View style={styles.squaresContainer}>
-          <DefaultSquareDiv  style={styles.div} textColor="#3F92C5" text="SECOMP 2023" data="10/10/2023" imageSource={require('../assets/img/ImagemSquare1.png')} onPress={() => goToAcoesPesquisa('SECOMP 2023')}/>
-          <DefaultSquareDiv  style={styles.div} textColor="#3F92C5" text="UBUNTU 2022" data="05/06/2022" imageSource={require('../assets/img/imagemSquare2.png')} onPress={() => goToAcoesPesquisa('UBUNTU 2022')}/>
-          <DefaultSquareDiv  style={styles.div} textColor="#3F92C5" text="MENINAS CPU" data="01/04/2022" imageSource={require('../assets/img/imagemSquare3.png')} onPress={() => goToAcoesPesquisa('MENINAS CPU')}/>
+          <DefaultSquareDiv  style={styles.div} textColor="#3F92C5" text="SECOMP 2023" data="10/10/2023" imageSource={require('../assets/img/ImagemSquare1.png')} onPress={() => goToAcoesPesquisa('Secomp 2023')}/>
+          <DefaultSquareDiv  style={styles.div} textColor="#3F92C5" text="UBUNTU 2022" data="05/06/2022" imageSource={require('../assets/img/imagemSquare2.png')} onPress={() => goToAcoesPesquisa('Ubuntu 2022')}/>
+          <DefaultSquareDiv  style={styles.div} textColor="#3F92C5" text="MENINAS CPU" data="01/04/2022" imageSource={require('../assets/img/imagemSquare3.png')} onPress={() => goToAcoesPesquisa('Meninas CPU')}/>
+          <DefaultSquareDiv  style={styles.div} textColor="#3F92C5" text="Carnaval 2024" data="16/02/2024" imageSource={require('../assets/img/imagemSquare3.png')} onPress={() => goToAcoesPesquisa('Carnaval')}/>
         </View>
       </ScrollView>
       <DefaultButton style={styles.botao} title={'Nova Pesquisa'} color={'#37BD6D'} width={350} onPress={goToNovaPesquisa}/>
@@ -50,8 +51,8 @@ const styles = StyleSheet.create({
   },
   div: {
     backgroundColor: 'white',
-    width: 200,
-    height: 200,
+    width: 210,
+    height: 210,
     marginLeft: 10,    
     alignItems: 'center', 
     justifyContent: 'center',
