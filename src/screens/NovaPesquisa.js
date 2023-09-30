@@ -6,7 +6,7 @@ import DefaultInput from '../components/DefaultInput';
 export default function NovaPesquisa(props) {
 
   const goToHome = () => {
-    props.navigation.navigate('Home')
+    props.navigation.navigate('Drawer')
   }
 
   return (

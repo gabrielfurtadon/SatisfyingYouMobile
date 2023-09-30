@@ -3,7 +3,7 @@ import { createStackNavigator } from '@react-navigation/stack';
 import AcoesPesquisa from './src/screens/AcoesPesquisa';
 import AgradecimentoParticipacao from './src/screens/AgradecimentoParticipacao';
 import Coleta from './src/screens/Coleta';
-import Home from './src/screens/Home';
+import Drawer from './src/screens/Drawer';
 import Login from './src/screens/Login';
 import ModificarPesquisa from './src/screens/ModificarPesquisa';
 import NovaConta from './src/screens/NovaConta';
@@ -43,7 +43,11 @@ const App = () => {
                 />
                 <Stack.Screen name="NovaConta" component={NovaConta} />
                 <Stack.Screen name="RecuperarSenha" component={RecuperarSenha} />
-                <Stack.Screen name="Home" component={Home} />
+
+                <Stack.Screen name="Drawer" component={Drawer} />
+                {/* <Stack.Screen name="Home" component={Home} /> */}
+
+
                 <Stack.Screen name="NovaPesquisa" component={NovaPesquisa} />
                 <Stack.Screen name="ModificarPesquisa" component={ModificarPesquisa} />
                 <Stack.Screen name="Relatorio" component={Relatorio} />
