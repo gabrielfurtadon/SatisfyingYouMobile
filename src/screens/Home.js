@@ -11,14 +11,18 @@ export default function Home(props) {
     props.navigation.navigate('NovaPesquisa')
   }
 
+  const goToAcoesPesquisa = (titulo) => {
+    props.navigation.navigate('AcoesPesquisa', { titulo });
+  }
+
   return (
     <View style={styles.container}>
       <DefaultInput style={styles.busca} placeholder={'🔍  Insira o termo de busca'} size={350} />
       <ScrollView horizontal={true} style={styles.scrollView}>
         <View style={styles.squaresContainer}>
-          <DefaultSquareDiv  style={styles.div} text="SECOMP 2023" data="10/10/2023" imageSource={require('../assets/img/ImagemSquare1.png')}/>
-          <DefaultSquareDiv  style={styles.div} text="UBUNTU 2022" data="05/06/2022" imageSource={require('../assets/img/imagemSquare2.png')}/>
-          <DefaultSquareDiv  style={styles.div} text="MENINAS CPU" data="01/04/2022" imageSource={require('../assets/img/imagemSquare3.png')}/>
+          <DefaultSquareDiv  style={styles.div} textColor="#3F92C5" text="SECOMP 2023" data="10/10/2023" imageSource={require('../assets/img/ImagemSquare1.png')} onPress={() => goToAcoesPesquisa('SECOMP 2023')}/>
+          <DefaultSquareDiv  style={styles.div} textColor="#3F92C5" text="UBUNTU 2022" data="05/06/2022" imageSource={require('../assets/img/imagemSquare2.png')} onPress={() => goToAcoesPesquisa('UBUNTU 2022')}/>
+          <DefaultSquareDiv  style={styles.div} textColor="#3F92C5" text="MENINAS CPU" data="01/04/2022" imageSource={require('../assets/img/imagemSquare3.png')} onPress={() => goToAcoesPesquisa('MENINAS CPU')}/>
         </View>
       </ScrollView>
       <DefaultButton style={styles.botao} title={'Nova Pesquisa'} color={'#37BD6D'} width={350} onPress={goToNovaPesquisa}/>
@@ -48,7 +52,9 @@ const styles = StyleSheet.create({
     backgroundColor: 'white',
     width: 200,
     height: 200,
-    marginLeft: 10,
+    marginLeft: 10,    
+    alignItems: 'center', 
+    justifyContent: 'center',
   },
   botao: {
     marginBottom: 20

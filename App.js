@@ -6,6 +6,7 @@ import NovaConta from './src/screens/NovaConta';
 import NovaPesquisa from './src/screens/NovaPesquisa';
 import Home from './src/screens/Home';
 import RecuperarSenha from './src/screens/RecuperarSenha';
+import AcoesPesquisa from './src/screens/AcoesPesquisa';
 
 const Stack = createStackNavigator()
 
@@ -37,6 +38,14 @@ const App =  () => {
                 <Stack.Screen name="Home" component={Home} />
                 <Stack.Screen name="NovaPesquisa" component={NovaPesquisa} />
                 <Stack.Screen name="ModificarPesquisa" component={ModificarPesquisa} />
+                {/* <Stack.Screen name="AcoesPesquisa" component={AcoesPesquisa} /> */}
+                <Stack.Screen
+                    name="AcoesPesquisa"
+                    component={AcoesPesquisa}
+                    options={({ route }) => ({
+                        title: route.params?.titulo || 'Ações de Pesquisa',
+                    })}
+                />
             </Stack.Navigator>
         </NavigationContainer>
     )

@@ -1,7 +1,7 @@
 import React from 'react';
 import { StyleSheet, Text, TouchableOpacity, View, Image } from 'react-native';
 
-export const DefaultSquareDiv = ({ title, color, width, style, disabled, imageSource, text, data }) => {
+export const DefaultSquareDiv = ({ color, textColor, onPress, width, style, disabled, imageSource, text, data }) => {
   const divStyle = {
     backgroundColor: color || 'green',
   };
@@ -14,18 +14,13 @@ export const DefaultSquareDiv = ({ title, color, width, style, disabled, imageSo
       alignItems: 'center', 
       width: width || 100,
     },
-    buttonText: {
-      color: 'white',
-      fontSize: 16,
-      fontFamily: 'AveriaLibre-Regular',
-    },
     image: {
       width: 80, 
       height: 80, 
       marginBottom: 10, 
     },
     text: {
-      color: '#3F92C5',
+      color: textColor,
       fontSize: 25,
       fontFamily: 'AveriaLibre-Regular',
     },
@@ -37,12 +32,12 @@ export const DefaultSquareDiv = ({ title, color, width, style, disabled, imageSo
   return (
     <TouchableOpacity
       style={[styles.div, divStyle, style]}
+      onPress={onPress}
       disabled={disabled}
     >
       <Image source={imageSource} style={styles.image} />
       <Text style={styles.text}>{text}</Text>
-      <Text style={styles.buttonText}>{title}</Text>
-      <Text>{data}</Text>
+      {data && <Text>{data}</Text>}
     </TouchableOpacity>
   );
 };
