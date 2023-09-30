@@ -18,7 +18,7 @@ export default function Login(props) {
   }
 
   const goToHome = () => {
-    props.navigation.navigate('Home')
+    props.navigation.navigate('Drawer')
   }
 
   const handleEmailChange = (text) => {

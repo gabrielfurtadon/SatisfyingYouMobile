@@ -10,6 +10,7 @@ import Relatorio from './src/screens/Relatorio';
 import AcoesPesquisa from './src/screens/AcoesPesquisa';
 import Coleta from './src/screens/Coleta';
 import AgradecimentoParticipacao from './src/screens/AgradecimentoParticipacao';
+import Drawer from './src/screens/Drawer';
 
 const Stack = createStackNavigator()
 
@@ -43,7 +44,11 @@ const App =  () => {
                 />
                 <Stack.Screen name="NovaConta" component={NovaConta} />
                 <Stack.Screen name="RecuperarSenha" component={RecuperarSenha} />
-                <Stack.Screen name="Home" component={Home} />
+
+                <Stack.Screen name="Drawer" component={Drawer} />
+                {/* <Stack.Screen name="Home" component={Home} /> */}
+
+
                 <Stack.Screen name="NovaPesquisa" component={NovaPesquisa} />
                 <Stack.Screen name="ModificarPesquisa" component={ModificarPesquisa} />
                 <Stack.Screen name="Relatorio" component={Relatorio} />               
