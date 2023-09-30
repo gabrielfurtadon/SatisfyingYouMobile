@@ -18,7 +18,7 @@ export default function RecuperarSenha() {
     <View style={styles.container}>
       <DefaultInput onChangeText={handleEmailChange} placeholder={'Digite seu email'} title={'E-mail'} size={300} error={emailError}/>
   
-      <DefaultButton title={'Recuperar'} color={'#37BD6D'} width={300} disabled={Boolean(emailError)}/>
+      <DefaultButton title={'Recuperar'} color={'#37BD6D'} width={300} disabled={Boolean(emailError) || email == ""}/>
       
     </View>
   );

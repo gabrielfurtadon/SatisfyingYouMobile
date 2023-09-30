@@ -33,7 +33,7 @@ export default function NovaConta() {
       <DefaultInput onChangeText={handlePasswordChange} secure={true} placeholder={'Digite sua senha'} title={'Senha'} size={300}/>
       <DefaultInput onChangeText={handleRepeatPasswordChange} secure={true} placeholder={'Repita sua senha'} title={'Repetir senha'} size={300} error={passwordError} />
     
-      <DefaultButton title={'Cadastrar'} color={'#37BD6D'} width={300} disabled={Boolean(emailError) || Boolean(passwordError)}/>
+      <DefaultButton title={'Cadastrar'} color={'#37BD6D'} width={300} disabled={Boolean(emailError) || Boolean(passwordError) || email == "" || password == ""}/>
       
     </View>
   );
