@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { StyleSheet, View, Text } from 'react-native';
+import { StyleSheet, Text, View } from 'react-native';
 
 export default function AgradecimentoParticipacao(props) {
 
@@ -10,7 +10,7 @@ export default function AgradecimentoParticipacao(props) {
   useEffect(() => {
     const timer = setTimeout(() => {
       goToColeta();
-    }, 3000); 
+    }, 3000);
 
     return () => clearTimeout(timer);
   }, []);
@@ -27,9 +27,9 @@ const styles = StyleSheet.create({
   container: {
     backgroundColor: '#372775',
     flex: 1,
-    gap: 100, 
+    gap: 100,
     padding: 10,
-    alignItems: 'center', 
+    alignItems: 'center',
     justifyContent: 'center',
   },
   title: {

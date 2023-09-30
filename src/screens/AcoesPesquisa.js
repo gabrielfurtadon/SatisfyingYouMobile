@@ -1,5 +1,7 @@
 import React from 'react';
+import { StyleSheet, View } from 'react-native';
 import { DefaultSquareDiv } from '../components/DefaultSquareDiv';
+
 
 export default function AcoesPesquisa(props) {
 
