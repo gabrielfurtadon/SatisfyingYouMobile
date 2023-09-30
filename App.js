@@ -12,6 +12,11 @@ import AgradecimentoParticipacao from './src/screens/AgradecimentoParticipacao';
 
 const Stack = createStackNavigator()
 
+function formatText(inputText) {
+    const words = inputText.split(' ');
+    return words[0].charAt(0).toUpperCase() + words[0].slice(1).toLowerCase();
+}
+  
 const App =  () => {
     return(
         <NavigationContainer>
@@ -44,13 +49,16 @@ const App =  () => {
                     name="AcoesPesquisa"
                     component={AcoesPesquisa}
                     options={({ route }) => ({
-                        title: route.params?.title || 'Ações de Pesquisa',
+                        title: formatText(route.params?.title) || 'Ações de Pesquisa',
+                        // route.params?.title.split(' ').map((word, index) => index === 0 ? word.charAt(0).toUpperCase() + word.slice(1).toLowerCase() : word).join(' ')
+                        
                     })}
                 />
                 <Stack.Screen 
                     name="Coleta" 
                     component={Coleta} 
-                    options={{ headerShown: false}} />
+                    options={{ headerShown: false}} 
+                />
                 <Stack.Screen 
                     name="AgradecimentoParticipacao" 
                     component={AgradecimentoParticipacao} 

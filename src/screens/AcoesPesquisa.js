@@ -12,7 +12,9 @@ export default function AcoesPesquisa(props) {
   }
 
   const goToColeta = () => {
-    props.navigation.navigate('Coleta')
+    props.navigation.navigate('Coleta', {
+      title: props.route.params?.title,
+    });
   }
 
   const goToRelatorio = () => {
