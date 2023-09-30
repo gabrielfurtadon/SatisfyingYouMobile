@@ -1,33 +1,50 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Image, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import { DefaultButton } from '../components/DefaultButton';
 import DefaultInput from '../components/DefaultInput';
+import DeleteModal from '../components/DeleteModal';
 
 
 
 export default function NovaPesquisa(props) {
+  const [modalVisible, setModalVisible] = useState(false);
 
   const goToHome = () => {
     props.navigation.navigate('Pagina Principal')
   }
 
+  const handleDeletePress = () => {
+    setModalVisible(true);
+  }
+
+  const handleDeleteConfirm = () => {
+    setModalVisible(false);
+  }
+
+  const handleModalClose = () => {
+    setModalVisible(false);
+  }
+
   return (
+    
     <View style={styles.container}>
       <View style={styles.forms}>
-        <DefaultInput secure={true} title={'Nome'} size={350}/>
-        <DefaultInput secure={true} title={'Data'} size={350}></DefaultInput>
-        <DefaultInput secure={true} placeholder={'Câmera/Galeria de imagens'} title={'Imagem'} size={350} height={70} />
+      <DefaultInput title={'Nome'} size={350}/>
+          <DefaultInput title={'Data'} size={350}></DefaultInput>
+          <DefaultInput placeholder={'Câmera/Galeria de imagens'} title={'Imagem'} size={350} height={70} />
       </View>
-      <TouchableOpacity  >
-        <View >
+      <TouchableOpacity onPress={handleDeletePress}>
+        <View>
           <Image source={require('../assets/img/lixeria.png')} style={styles.trashIcon} />
           <Text style={styles.apagarText}>Apagar</Text>
         </View>
       </TouchableOpacity>
-
       <View style={styles.botao}>
-      <DefaultButton   title={'SALVAR'} color={'#37BD6D'} width={350} onPress={goToHome}/>
+        <DefaultButton title={'SALVAR'} color={'#37BD6D'} width={350} onPress={goToHome} />
       </View>
+
+
+      <DeleteModal visible={modalVisible} onDelete={handleDeleteConfirm} onClose={handleModalClose} />
     </View>
   );
 }
