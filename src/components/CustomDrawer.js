@@ -1,12 +1,23 @@
 import { DrawerContentScrollView, DrawerItem, DrawerItemList } from '@react-navigation/drawer';
+import { Divider } from 'react-native-paper';
+
 
 const CustomDrawer = (props) => {
   return (
     <DrawerContentScrollView {...props}>
-      <DrawerItemList {...props} />
-      <DrawerItem label="Sair" onPress={() => { props.navigation.popToTop() }} />
+      <DrawerItem    
+         labelStyle={{color: 'white' }}
+         label="usuario@dominio.com"/>
+      <Divider />
+      <DrawerItemList
+       {...props} />
+      <DrawerItem
+      labelStyle={{color: 'white' }}
+      label="Sair" onPress={() => { props.navigation.popToTop() }} 
+     />
     </DrawerContentScrollView>
   );
 }
+
 
 export default CustomDrawer;
